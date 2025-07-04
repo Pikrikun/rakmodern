@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rak Storage Premium - Solusi Penyimpanan Terdepan</title>
+
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+.hero-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.7rem 2rem; /* padding diperbesar */
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .hero-badge {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2c3e50;
+            --secondary: #e74c3c;
+            --accent: #f39c12;
+            --light: #ecf0f1;
+            --dark: #34495e;
+            --success: #27ae60;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--primary);
+            background: #ffffff;
+        }
+
+        /* Glassmorphism Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-menu a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 120vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+  padding-top: 70px; /* menyesuaikan tinggi navbar */
+  position: relative;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text {
+            color: white;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(231, 76, 60, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 1rem 2.5rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            position: relative;
+            padding-bottom: 2rem;
+        }
+
+        .product-showcase {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+            transform: perspective(1000px) rotateY(-15deg);
+            transition: transform 0.3s ease;
+        }
+
+        .product-showcase:hover {
+            transform: perspective(1000px) rotateY(0deg) scale(1.05);
+        }
+
+        .main-product-image {
+            width: 100%;
+            border-radius: 30px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Product Section */
+        .product-section {
+            padding: 6rem 0;
+            background: #f8fafc;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: start;
+        }
+
+        /* Image Gallery */
+        .image-gallery {
+            position: sticky;
+            top: 100px;
+        }
+
+        .gallery-main {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .main-image {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .image-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--secondary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .gallery-thumbs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .thumb {
+            aspect-ratio: 1;
+            border-radius: 15px;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+            object-fit: cover;
+        }
+
+        .thumb:hover, .thumb.active {
+            border-color: var(--secondary);
+            transform: scale(1.05);
+        }
+
+        /* Product Info */
+        .product-info {
+            background: white;
+            padding: 3rem;
+            border-radius: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+        }
+
+        .product-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        /* Rating System */
+        .rating-section {
+            margin: 2rem 0;
+            padding: 2rem;
+            background: #f8fafc;
+            border-radius: 20px;
+        }
+
+        .rating-overview {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .rating-score {
+            text-align: center;
+        }
+
+        .rating-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        .rating-stars {
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin: 0.5rem 0;
+        }
+
+        .rating-count {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .rating-bars {
+            flex: 1;
+        }
+
+        .rating-bar {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .bar-label {
+            font-size: 0.9rem;
+            color: #64748b;
+            width: 20px;
+        }
+
+        .bar-progress {
+            flex: 1;
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: var(--accent);
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+
+        .bar-count {
+            font-size: 0.9rem;
+            color: #64748b;
+            width: 30px;
+            text-align: right;
+        }
+
+        .add-review-btn {
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .add-review-btn:hover {
+            background: var(--dark);
+            transform: translateY(-2px);
+        }
+
+        /* Reviews List */
+        .reviews-list {
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 1rem;
+        }
+
+        .review-item {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .reviewer-name {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .review-date {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .review-stars {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .review-text {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        /* Price Section */
+        .price-section {
+            margin: 2rem 0;
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 25px;
+            color: white;
+        }
+
+        .price-current {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-original {
+            font-size: 1.5rem;
+            text-decoration: line-through;
+            opacity: 0.7;
+            margin-right: 1rem;
+        }
+
+        .price-discount {
+            background: var(--secondary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .price-timer {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Variants */
+        .variants {
+            margin: 2rem 0;
+        }
+
+        .variant-group {
+            margin-bottom: 2rem;
+        }
+
+        
+.review-section {
+  padding: 4rem 1rem;
+  background: #f9fafb;
+}
+
+/* Wrapper Carousel Scroll */
+.carousel-wrapper {
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.carousel-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 1rem;
+  padding: 1rem 0 2rem 1rem;
+}
+
+/* Card Review */
+.review-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  width: 90vw;
+  max-width: 320px;
+  word-break: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease;
+}
+
+
+
+.review-card:hover {
+  transform: scale(1.02);
+}
+
+/* Nama & Bintang */
+.review-header {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.review-stars {
+  color: #f39c12;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Isi Teks */
+.review-text {
+  font-size: clamp(0.9rem, 1vw + 0.4rem, 1rem);
+  line-height: 1.6;
+  color: #555;
+}
+
+
+/* Navigasi Panah (jika ada) */
+.carousel-nav {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.carousel-nav button {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  color: #2c3e50;
+  transition: transform 0.2s;
+}
+
+.carousel-nav button:hover {
+  transform: scale(1.3);
+}
+
+/* ==========================================
+   RESPONSIVE SETTINGS PER LAYAR
+   ========================================== */
+
+/* Layar Laptop Kebawah (1024px) */
+@media (max-width: 1024px) {
+  .review-card {
+    width: 85vw;
+  }
+}
+
+/* Layar Tablet (768px) */
+@media (max-width: 768px) {
+  .review-card {
+    width: 90vw;
+  }
+}
+
+/* HP kecil (480px) */
+@media (max-width: 480px) {
+  .review-card {
+    width: 95vw;
+  }
+}
+
+
+
+
+
+        .variant-label {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .variant-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .variant-card {
+            padding: 1.5rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            background: white;
+        }
+
+        .variant-card:hover {
+            border-color: var(--secondary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .variant-card.selected {
+            border-color: var(--secondary);
+            background: linear-gradient(135deg, #fff5f5, #fef2f2);
+        }
+
+        .variant-name {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .variant-price {
+            color: var(--secondary);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        /* Video Section */
+        .video-section {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .video-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.1);
+        }
+
+        .video-placeholder {
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            position: relative;
+        }
+
+        .play-btn {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .play-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+
+        .play-btn i {
+            font-size: 2rem;
+            margin-left: 5px;
+        }
+
+        /* Order Popup */
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 3000;
+            backdrop-filter: blur(10px);
+        }
+
+        .popup {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 3rem;
+            border-radius: 30px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+        }
+
+        .popup-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .popup-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .popup-subtitle {
+            color: #64748b;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .close-btn:hover {
+            background: #e2e8f0;
+            transform: scale(1.1);
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 15px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .image-gallery {
+  max-width: 100%;
+  width: 100%;
+}
+
+.gallery-main {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.gallery-thumbs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+
+
+.thumb {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.thumb:hover,
+.thumb.active {
+  border-color: var(--secondary);
+  transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+  .thumb {
+    width: 50px;
+    height: 50px;
+  }
+
+  .gallery-main {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image-gallery {
+    position: static;
+    margin-bottom: 2rem;
+  }
+
+  .gallery-main {
+    text-align: center;
+  }
+
+  .main-image {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.footer {
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 3rem 1.5rem 2rem;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-brand h3 {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.footer-brand p {
+  max-width: 300px;
+  line-height: 1.6;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-contact p {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: #bdc3c7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-brand,
+  .footer-links,
+  .footer-contact {
+    width: 100%;
+  }
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 1rem;
+}
+
+.carousel-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 1rem;
+  padding-left: 1rem;
+}
+
+.review-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  width: clamp(260px, 80vw, 320px);
+  word-break: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+  transform: scale(1.02);
+}
+
+.video-responsive {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+        }
+
+        .payment-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .payment-option {
+            padding: 1.5rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .payment-option:hover, .payment-option.selected {
+            border-color: var(--secondary);
+            background: #fff5f5;
+        }
+
+        .payment-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, var(--secondary), #c0392b);
+            color: white;
+            padding: 1.25rem;
+            border: none;
+            border-radius: 20px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .payment-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .variant-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .rating-overview {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--secondary);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #c0392b;
+        }
+
+        @media (max-width: 425px){
+            .hero{
+                padding-top: 100px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @media (max-width: 375px) {
+  .review-card {
+    min-width: 92vw;
+    max-width: 92vw;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .review-text {
+    font-size: 0.9rem;
+  }
+
+  .review-header {
+    font-size: 0.9rem;
+  }
+
+  .review-stars {
+    font-size: 1rem;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">RakPremium</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#product">Produk</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#reviews">Ulasan</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">✨ Produk Terlaris #1</div>
+                <h1>Revolusi Penyimpanan Modern</h1>
+                <p>Laci Lipat Rak Baju Storage premium dengan desain minimalis yang mengubah cara Anda mengorganisir ruangan. Hemat tempat, stylish, dan multifungsi.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="openOrderPopup()">
+                        <i class="fas fa-shopping-cart"></i>
+                        Beli Sekarang
+                    </button>
+                    <a href="#video" class="btn-secondary">
+                        <i class="fas fa-play"></i>
+                        Lihat Video
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="product-showcase">
+                    <img src="id-11134207-7rasl-m5582577sj6e0a.webp" alt="Rak Storage Premium" class="main-product-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section id="product" class="product-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Produk Unggulan</h2>
+                <p class="section-subtitle">Solusi penyimpanan terdepan dengan kualitas premium dan desain yang memukau</p>
+            </div>
+
+            <div class="product-grid">
+                <!-- Image Gallery -->
+                <div class="image-gallery">
+                    <div class="gallery-main">
+                        <img id="mainProductImage" src="id-11134207-7rasl-m5582577sj6e0a.webp" alt="Rak Storage" class="main-image">
+                        <div class="image-badge">Terlaris</div>
+                    </div>
+                    <div class="gallery-thumbs">
+                        <img src="id-11134207-7ras8-m53zv95wae1k75.webp" alt="View 1" class="thumb active" onclick="changeMainImage(this.src)">
+                        <img src="id-11134207-7rasa-m5582577pq1i90.webp" alt="View 2" class="thumb" onclick="changeMainImage(this.src)">
+                        <img src="id-11134207-7rasa-m5582577txquc6.webp" alt="View 3" class="thumb" onclick="changeMainImage(this.src)">
+                        <img src="id-11134207-7rase-m5582577obh2ee.webp" alt="View 4" class="thumb" onclick="changeMainImage(this.src)">
+                    </div>
+                </div>
+
+                    <!-- Product Info -->
+<div class="product-info">
+  <h1 class="product-title">Laci Lipat Rak Baju Storage Susun Multi Scene</h1>
+
+  <!-- Deskripsi Produk -->
+  <div class="product-description" style="margin-bottom: 2rem;">
+    <p>
+      Laci lipat serbaguna yang cocok untuk menyimpan pakaian, mainan, dan berbagai kebutuhan rumah tangga. 
+      Dirancang dengan gaya minimalis modern, produk ini mudah dilipat, hemat tempat, dan terbuat dari bahan 
+      berkualitas yang kokoh dan tahan lama. Cocok digunakan di kamar tidur, ruang anak, hingga ruang laundry.
+    </p>
+  </div>
+
+  <!-- Stok Produk -->
+  <div class="product-stock" style="margin-bottom: 2rem;">
+    <strong>Stok Tersisa:</strong> <span style="color: #e74c3c; font-weight: 700;">21 unit</span>
+  </div>
+
+  <!-- Variants (dengan harga berbeda) -->
+  <div class="variants">
+
+  <!-- Group 1: Model & Susunan -->
+  <div class="variant-group">
+    <label class="variant-label">Pilih Model Rak:</label>
+    <div class="variant-grid">
+      <div class="variant-card selected">
+        <div class="variant-name">2Susun Persegi</div>
+        <div class="variant-price">Rp26.000</div>
+      </div>
+      <div class="variant-card">
+        <div class="variant-name">3Susun Persegi</div>
+        <div class="variant-price">Rp38.000</div>
+      </div>
+      <div class="variant-card">
+        <div class="variant-name">4Susun Persegi</div>
+        <div class="variant-price">Rp40.000</div>
+      </div>
+      <div class="variant-card">
+        <div class="variant-name">2Susun Segitiga</div>
+        <div class="variant-price">Rp27.000</div>
+      </div>
+      <div class="variant-card">
+        <div class="variant-name">3Susun Segitiga</div>
+        <div class="variant-price">Rp38.000</div>
+      </div>
+      <div class="variant-card">
+        <div class="variant-name">4Susun Segitiga</div>
+        <div class="variant-price">Rp40.000</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Group 2: Warna -->
+  <div class="variant-group">
+    <label class="variant-label">Pilih Warna:</label>
+    <div class="variant-grid">
+      <div class="variant-card selected">
+        <div class="variant-name">Hitam</div>
+        <div class="color-dot" style="background-color: black;"></div>
+      </div>
+      <div class="variant-card">
+        <div class="variant-name">Putih</div>
+        <div class="color-dot" style="background-color: white; "></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Tombol Beli -->
+  <div style="text-align: center; margin-top: 2rem;">
+  <button class="btn-primary" onclick="openOrderPopup()">
+    <i class="fas fa-shopping-bag"></i> Pesan Sekarang
+  </button>
+</div>
+
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="video-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Lihat Produk dalam Aksi</h2>
+                <p class="section-subtitle">Simak bagaimana produk ini membantu mengorganisir ruang Anda dengan rapi dan efisien</p>
+            </div>
+            <div class="video-container">
+                <div class="video-responsive">
+<video controls width="100%" style="border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.1);">
+  <source src="id-11110105-6kou6-mbg6ggfbg61c32.16000081750909333.mp4" type="video/mp4">
+  Browser Anda tidak mendukung video.
+</video>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Ulasan Pembeli -->
+
+   <section id="reviews" class="review-section">
+  <div class="container">
+    <h2 class="section-title" style="text-align:center; margin-bottom:2rem;">Ulasan Pelanggan</h2>
+
+    <div class="carousel-wrapper">
+      <div class="carousel-track" id="carouselTrack">
+        <!-- Ulasan 1–10 -->
+        <!-- Gunakan loop div.review-card -->
+        <div class="review-card">
+          <div class="review-header">
+            <strong>Sari Dewi</strong>
+            <div class="review-stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+  </div>
+          </div>
+          <p class="review-text">Produk sangat bagus! Bahan tebal dan kokoh, sangat membantu penyimpanan di kamar kos saya.</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <strong>Budi Santoso</strong>
+            <div class="review-stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+  </div>
+          </div>
+          <p class="review-text">Desain simpel dan ringan. Agak tipis tapi sesuai harga. Kirim cepat!</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <strong>Rina Marlina</strong>
+            <div class="review-stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+  </div>
+          </div>
+          <p class="review-text">Gampang dirakit dan muat banyak. Saya beli 2 langsung!</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <strong>Aditya Pratama</strong>
+            <div class="review-stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+  </div>
+          </div>
+          <p class="review-text">Praktis, dan bisa dilipat saat tidak digunakan. Recommended!</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <strong>Lina Wulandari</strong>
+            <div class="review-stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+  </div>
+          </div>
+          <p class="review-text">Warna pink-nya lucu banget! Cocok buat kamar anak.</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <strong>Andi Nugroho</strong>
+            <div class="review-stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+  </div>
+          </div>
+          <p class="review-text">Kualitas bagus, hanya pengiriman agak lama. Tapi worth it.</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <strong>Salsa Amelia</strong>
+            <div class="review-stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+  </div>
+          </div>
+          <p class="review-text">Sesuai deskripsi. Beli buat kado, penerimanya suka banget!</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <strong>Yuda Kurniawan</strong>
+            <div class="review-stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+  </div>
+          </div>
+          <p class="review-text">Sudah pesan 3x. Selalu puas dengan kualitas dan pelayanan seller.</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <strong>Nina Kartika</strong>
+            <div class="review-stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+  </div>
+          </div>
+          <p class="review-text">Barang oke, tapi lebih bagus kalau ada ukuran lebih besar.</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <strong>Denny Wijaya</strong>
+            <div class="review-stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+  </div>
+          </div>
+          <p class="review-text">Mantap, sangat praktis. Saya pakai untuk simpan perlengkapan kerja.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigasi panah -->
+    <div class="carousel-nav">
+      <button onclick="prevSlide()">❮</button>
+      <button onclick="nextSlide()">❯</button>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h3>RakPremium</h3>
+      <p>Solusi penyimpanan rumah tangga yang praktis, stylish, dan efisien.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Tautan</h4>
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#product">Produk</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#reviews">Ulasan</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Kontak</h4>
+      <p><i class="fas fa-phone"></i> 0812-3456-7890</p>
+      <p><i class="fas fa-envelope"></i> support@rakpremium.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 RakPremium. Semua Hak Dilindungi.</p>
+  </div>
+</footer>
+
+
+    <!-- Order Popup -->
+    <div class="popup-overlay" id="orderPopup">
+        <div class="popup">
+            <button class="close-btn" onclick="closeOrderPopup()"><i class="fas fa-times"></i></button>
+            <div class="popup-header">
+                <h2 class="popup-title">Formulir Pemesanan</h2>
+                <p class="popup-subtitle">Isi data berikut untuk melanjutkan pesanan Anda</p>
+            </div>
+            <div class="form-group">
+
+                <label class="form-label">Nama Lengkap</label>
+                <input type="text" id="nama" class="form-input" placeholder="Nama Anda">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Nomor Telepon</label>
+                <input type="tel" id="telepon" class="form-input" placeholder="08xxxxxxxxxx">
+            </div>
+            <div class="form-group">
+  <label class="form-label">Provinsi</label>
+  <input type="text" id="provinsi" class="form-input" placeholder="Contoh: Jawa Tengah">
+</div>
+
+<div class="form-group">
+  <label class="form-label">Kabupaten/Kota</label>
+  <input type="text" id="kabupaten" class="form-input" placeholder="Contoh: Sukoharjo">
+</div>
+
+<div class="form-group">
+  <label class="form-label">Kecamatan</label>
+  <input type="text" id="kecamatan" class="form-input" placeholder="Contoh: Watu Tebok">
+</div>
+
+<div class="form-group">
+  <label class="form-label">Kelurahan</label>
+  <input type="text" id="kelurahan" class="form-input" placeholder="Contoh: ngadikempet">
+</div>
+
+<div class="form-group">
+  <label class="form-label">Kode Pos</label>
+  <input type="text" id="kodepos" class="form-input" placeholder="Contoh: 57161">
+</div>
+
+            <div class="form-group">
+                <label class="form-label">Alamat Lengkap</label>
+                <textarea id="alamat" class="form-input" rows="3" placeholder="Tuliskan alamat lengkap beserta kode pos"></textarea>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Metode Pembayaran</label>
+                <div class="payment-grid">
+                    <div class="payment-option selected">
+                        <div class="payment-icon"><i class="fas fa-qrcode"></i></div>
+                        QRIS
+                    </div>
+                    <div class="payment-option">
+                        <div class="payment-icon"><i class="fas fa-university"></i></div>
+                        Transfer Bank
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+  <label class="form-label">Produk yang Dipilih</label>
+  <input type="text" id="produkDipilih" class="form-input" readonly value="2Susun Persegi">
+</div>
+
+<div class="form-group">
+  <label class="form-label">Warna yang Dipilih</label>
+  <input type="text" id="warnaDipilih" class="form-input" readonly value="Hitam">
+</div>
+
+            <div class="form-group">
+                <label class="form-label">Jumlah Pembelian</label>
+                <input type="number" id="jumlah" class="form-input" min="1" value="1">
+            </div>
+            <button class="submit-btn" onclick="kirimPesanan()">Kirim Pesanan ke WhatsApp</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+
+
+  function openOrderPopup() {
+    const popup = document.getElementById('orderPopup');
+    if (popup) {
+      popup.style.display = 'block';
+    }
+  }
+
+  function closeOrderPopup() {
+    const popup = document.getElementById('orderPopup');
+    if (popup) {
+      popup.style.display = 'none';
+    }
+  }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const groups = document.querySelectorAll('.variant-group');
+
+  groups.forEach(group => {
+    const cards = group.querySelectorAll('.variant-card');
+    const label = group.querySelector('.variant-label')?.textContent || "";
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        // Buat setiap grup mandiri
+        cards.forEach(c => c.classList.remove('selected'));
+        card.classList.add('selected');
+
+        // Update nilai input tersembunyi
+        const value = card.querySelector('.variant-name').textContent;
+
+        if (label.includes("Model")) {
+          document.getElementById("produkDipilih").value = value;
+        }
+
+        if (label.includes("Warna")) {
+          document.getElementById("warnaDipilih").value = value;
+        }
+      });
+    });
+  });
+});
+
+
+
+function kirimPesanan() {
+  const nama = document.getElementById("nama").value;
+  const telepon = document.getElementById("telepon").value;
+  const provinsi = document.getElementById("provinsi").value;
+  const kabupaten = document.getElementById("kabupaten").value;
+  const kecamatan = document.getElementById("kecamatan").value;
+  const kelurahan= document.getElementById("Kelurahan").value;
+  const kodepos = document.getElementById("kodepos").value;
+  const alamat = document.getElementById("alamat").value;
+  const jumlah = document.getElementById("jumlah").value;
+
+  const produk = document.getElementById("produkDipilih").value;
+  const warna = document.getElementById("warnaDipilih").value;
+
+  const metode = document.querySelector(".payment-option.selected")?.innerText.trim() || "QRIS";
+
+  const pesan = 
+`Halo, saya ingin memesan produk:
+
+🧾 Produk: ${produk}
+🎨 Warna: ${warna}
+📦 Jumlah: ${jumlah} pcs
+
+📍Alamat:
+${alamat}
+kelurahan: ${kelurahan}
+Kecamatan: ${kecamatan}
+Kabupaten/Kota: ${kabupaten}
+Provinsi: ${provinsi}
+Kode Pos: ${kodepos}
+
+📞 Kontak: ${nama} (${telepon})
+💳 Pembayaran: ${metode}
+
+Terima kasih!`;
+
+  const nomorWA = "6281234567890"; // Ganti dengan nomor WA kamu
+  const url = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
+  window.open(url, "_blank");
+}
+
+
+let currentIndex = 0;
+const track = document.getElementById('carouselTrack');
+const cards = document.querySelectorAll('.review-card');
+
+function updateCarousel() {
+  const cardWidth = cards[0].offsetWidth + 16; // 16px gap
+  track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+}
+
+function nextSlide() {
+  if (currentIndex < cards.length - 1) {
+    currentIndex++;
+    updateCarousel();
+  } else {
+    currentIndex = 0;
+    updateCarousel();
+  }
+}
+
+function prevSlide() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateCarousel();
+  }
+}
+
+setInterval(nextSlide, 5000); // auto slide setiap 5 detik
+
+
+
+    </script>
+</body>
+</html>

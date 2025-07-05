@@ -1043,13 +1043,16 @@
   box-shadow: 0 8px 30px rgba(0,0,0,0.1);
 }
 
-.video-responsive iframe {
+.video-responsive video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover; /* or "contain" if needed */
+  border-radius: 20px;
 }
+
 
 
         .form-input:focus {
@@ -1436,7 +1439,7 @@
     <i class="fas fa-star"></i>
   </div>
           </div>
-          <p class="review-text">Warna pink-nya lucu banget! Cocok buat kamar anak.</p>
+          <p class="review-text">Warna hitam nya unik banget! Cocok buat kamar anak.</p>
         </div>
         <div class="review-card">
           <div class="review-header">
@@ -1533,8 +1536,8 @@
 
     <div class="footer-contact">
       <h4>Kontak</h4>
-      <p><i class="fas fa-phone"></i> 0812-3456-7890</p>
-      <p><i class="fas fa-envelope"></i> support@rakpremium.com</p>
+      <p><i class="fas fa-phone"></i> 0815-6334-6462</p>
+      <p><i class="fas fa-envelope"></i> querykuy@gmail.com</p>
       <p><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</p>
     </div>
   </div>
@@ -1627,18 +1630,29 @@
 
 
   function openOrderPopup() {
-    const popup = document.getElementById('orderPopup');
-    if (popup) {
-      popup.style.display = 'block';
-    }
-  }
+  const overlay = document.getElementById('orderPopup');
+  const popup = overlay.querySelector('.popup');
 
-  function closeOrderPopup() {
-    const popup = document.getElementById('orderPopup');
-    if (popup) {
-      popup.style.display = 'none';
-    }
+  if (overlay && popup) {
+    overlay.style.display = 'flex';
+
+    // Aktifkan close saat klik di luar popup
+    overlay.onclick = function (e) {
+      if (!popup.contains(e.target)) {
+        closeOrderPopup();
+      }
+    };
   }
+}
+
+function closeOrderPopup() {
+  const overlay = document.getElementById('orderPopup');
+  if (overlay) {
+    overlay.style.display = 'none';
+    overlay.onclick = null; // Bersihkan handler agar tidak numpuk
+  }
+}
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const groups = document.querySelectorAll('.variant-group');
@@ -1676,7 +1690,7 @@ function kirimPesanan() {
   const provinsi = document.getElementById("provinsi").value;
   const kabupaten = document.getElementById("kabupaten").value;
   const kecamatan = document.getElementById("kecamatan").value;
-  const kelurahan= document.getElementById("Kelurahan").value;
+const kelurahan = document.getElementById("kelurahan").value;
   const kodepos = document.getElementById("kodepos").value;
   const alamat = document.getElementById("alamat").value;
   const jumlah = document.getElementById("jumlah").value;
@@ -1685,6 +1699,37 @@ function kirimPesanan() {
   const warna = document.getElementById("warnaDipilih").value;
 
   const metode = document.querySelector(".payment-option.selected")?.innerText.trim() || "QRIS";
+
+  let isValid = true;
+
+  function cekKosong(id) {
+    const elemen = document.getElementById(id);
+    if (!elemen.value.trim()) {
+      elemen.style.border = "2px solid red";
+      isValid = false;
+    } else {
+      elemen.style.border = "";
+    }
+  }
+
+  // Cek semua input
+  cekKosong("nama");
+  cekKosong("telepon");
+  cekKosong("provinsi");
+  cekKosong("kabupaten");
+  cekKosong("kecamatan");
+  cekKosong("kelurahan");
+  cekKosong("kodepos");
+  cekKosong("alamat");
+  cekKosong("jumlah");
+  cekKosong("produkDipilih");
+  cekKosong("warnaDipilih");
+
+  if (!isValid) {
+    alert("Mohon lengkapi semua data dengan benar sebelum melanjutkan.");
+    return;
+  }
+
 
   const pesan = 
 `Halo, saya ingin memesan produk:
@@ -1706,7 +1751,7 @@ Kode Pos: ${kodepos}
 
 Terima kasih!`;
 
-  const nomorWA = "6281234567890"; // Ganti dengan nomor WA kamu
+  const nomorWA = "6281563346462"; // Ganti dengan nomor WA kamu
   const url = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
   window.open(url, "_blank");
 }
@@ -1740,7 +1785,23 @@ function prevSlide() {
 
 setInterval(nextSlide, 5000); // auto slide setiap 5 detik
 
+function changeMainImage(src) {
+    const mainImg = document.getElementById("mainProductImage");
+    if (mainImg) {
+      mainImg.src = src;
 
+      // Remove class "active" dari semua thumbnail
+      document.querySelectorAll(".gallery-thumbs .thumb").forEach(img => {
+        img.classList.remove("active");
+      });
+
+      // Tambahkan class "active" ke yang diklik
+      const clickedThumb = [...document.querySelectorAll(".thumb")].find(img => img.src === src);
+      if (clickedThumb) clickedThumb.classList.add("active");
+    }
+  }
+
+  
 
     </script>
 </body>
